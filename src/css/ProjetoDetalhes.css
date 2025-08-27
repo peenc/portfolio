@@ -21,7 +21,6 @@
     margin-bottom: 30px;
 }
 
-
 .btn-voltar {
     background-color: #6c7a7a;
     color: white;
@@ -31,12 +30,21 @@
     border: none;
     font-weight: 600;
     transition: background-color 0.3s ease;
-    z-index: 10;
 }
 
 .btn-voltar:hover {
     background-color: #4f5a5a;
 }
+
+/* Em telas menores, faz o botão ocupar a linha toda */
+@media (max-width: 600px) {
+    .btn-voltar {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
 
 
 .navbar-title {
@@ -161,7 +169,7 @@
     padding: 0 30px;
 }
 
-.projeto-footer {
+.home-footer {
     text-align: center;
     font-size: 0.9rem;
     color: #777;
@@ -170,7 +178,7 @@
     border-top: 1px solid #ddd;
 }
 
-.projeto-footer p{
+.home-footer p{
     text-align: center;
     font-size: 0.9rem;
 }

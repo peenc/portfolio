@@ -1,8 +1,10 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { projects } from "/src/data/projects";
 import "../css/ProjetoDetalhes.css";
-import {FaGithub, FaLinkedin} from "react-icons/fa";
 import React from "react";
+import Footer from "./Footer.jsx";
+
+
 
 export default function ProjetoDetalhes() {
     const { id } = useParams();
@@ -22,11 +24,13 @@ export default function ProjetoDetalhes() {
     }
 
     return (
+
         <div className="projeto-detalhes ">
             <div className="navbar">
                 <button className="btn-voltar" onClick={() => navigate(-1)}>← Voltar</button>
                 <h1 className="navbar-title">{projeto.title}</h1>
             </div>
+
             <section id="projeto" className="info-section">
 
             <p style={{ fontSize: "1.05rem", marginBottom: "20px" }}>{projeto.description}</p>
@@ -83,17 +87,7 @@ export default function ProjetoDetalhes() {
 
             </section>
 
-            <footer className="projeto-footer">
-                <p>© 2025 Pedro Nunes Cardoso. Todos os direitos reservados.</p>
-                <div className="social-icons">
-                    <a href="https://github.com/peenc" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                        <FaGithub size={30} />
-                    </a>
-                    <a href="https://www.linkedin.com/in/pedro-nunes-683824230/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <FaLinkedin size={30} />
-                    </a>
-                </div>
-            </footer>
+            <Footer />
         </div>
     );
 }
