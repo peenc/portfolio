@@ -45,20 +45,26 @@ export default function Home() {
 
                 <InfoSection id="sobre" title="Sobre Mim">
                     <p>
-                        Sou profissional de tecnologia com atuação em <strong>engenharia de software aplicada a automação de processos,
-                        CRM e análise de dados</strong>, utilizando soluções técnicas para otimizar fluxos operacionais
+                        Sou profissional de tecnologia com atuação em
+                        <strong> engenharia de software aplicada à automação de processos, CRM e dados</strong>,
+                        desenvolvendo soluções técnicas para otimizar fluxos operacionais
                         e apoiar decisões orientadas por dados.
                     </p>
+
                     <p>
-                        Trabalho com <strong>integrações via APIs REST, automações em CRM, scripts e estruturação de dados</strong>,
-                        participando do desenvolvimento de soluções como bots de atendimento, automações de comunicação
-                        e sistemas de apoio à operação.
+                        Trabalho com
+                        <strong> integrações via APIs REST, automações em CRM, scripts e estruturação de dados</strong>,
+                        participando do desenvolvimento de bots de atendimento,
+                        sistemas de comunicação automatizada e soluções de apoio à operação.
                     </p>
+
                     <p>
-                        Minha formação em <strong>Ciência da Computação</strong> fornece uma base sólida em engenharia de software,
-                        arquitetura de sistemas e boas práticas, garantindo soluções escaláveis, seguras e bem documentadas.
+                        Minha formação em <strong>Ciência da Computação</strong> fornece base sólida em
+                        engenharia de software, arquitetura de sistemas e boas práticas,
+                        garantindo soluções escaláveis, seguras e bem documentadas.
                     </p>
                 </InfoSection>
+
 
                 <InfoSection id="automacao" title="Engenharia de Software aplicada a Automação, CRM e Dados">
                     <ul>
@@ -108,46 +114,46 @@ export default function Home() {
                     <ul>
                         <li>
                             <strong>Engenharia de Software & Automação:</strong>
-                            Arquitetura de sistemas, automações em CRM, prevenção de falhas e loops,
+                             Arquitetura de sistemas, automações em CRM, prevenção de falhas e loops,
                             documentação técnica e padronização.
                         </li>
                         <li>
-                            <strong>CRM & Automação:</strong>
-                            ActiveCampaign, Hilos, AppScript, Typeform, automações baseadas em regras de negócio.
+                            <strong>CRM & Automação: </strong>
+                             ActiveCampaign, Hilos, AppScript, Typeform, automações baseadas em regras de negócio.
                         </li>
                         <li>
                             <strong>Dados & Analytics:</strong>
-                            Modelagem e governança de dados, qualidade e enriquecimento de dados,
+                             Modelagem e governança de dados, qualidade e enriquecimento de dados,
                             métricas operacionais e KPIs, Google Sheets, Looker Studio, SQL.
                         </li>
                         <li>
                             <strong>Integrações:</strong>
-                            APIs REST, Webhooks, JSON, integrações entre sistemas e plataformas externas.
+                             APIs REST, Webhooks, JSON, integrações entre sistemas e plataformas externas.
                         </li>
                         <li>
                             <strong>Back-end:</strong>
-                            Java, Spring Boot, Spring Security, desenvolvimento de APIs REST,
+                             Java, Spring Boot, Spring Security, desenvolvimento de APIs REST,
                             autenticação e controle de acesso.
                         </li>
                         <li>
                             <strong>Front-end:</strong>
-                            React, Thymeleaf, HTML, CSS, Bootstrap, Tailwind CSS.
+                             React, Thymeleaf, HTML, CSS, Bootstrap, Tailwind CSS.
                         </li>
                         <li>
                             <strong>Banco de Dados:</strong>
-                            MySQL, PostgreSQL, H2, MongoDB.
+                             MySQL, PostgreSQL, H2, MongoDB.
                         </li>
                         <li>
                             <strong>Linguagens & Scripts:</strong>
-                            Java, Python, JavaScript, AppScript, SQL.
+                             Java, Python, JavaScript, AppScript, SQL.
                         </li>
                         <li>
                             <strong>Ferramentas:</strong>
-                            Git, GitHub, Postman, JUnit, IntelliJ, Eclipse, VSCode, Jira, Trello, Notion.
+                             Git, GitHub, Postman, JUnit, IntelliJ, Eclipse, VSCode, Jira, Trello, Notion.
                         </li>
                         <li>
                             <strong>Fundamentos:</strong>
-                            Engenharia de Software, Arquitetura de Sistemas, MVC, Microsserviços,
+                             Engenharia de Software, Arquitetura de Sistemas, MVC, Microsserviços,
                             Lógica de Programação.
                         </li>
                     </ul>

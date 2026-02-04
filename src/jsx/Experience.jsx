@@ -6,8 +6,8 @@ export default function Experience() {
         <InfoSection title="Experiência Profissional">
             <ul>
                 <li>
-                    <strong>Engenharia de Software aplicada a CRM e Automação</strong><br />
-                    <em>Projetos internos / Operações de CRM e Dados</em>
+                    <strong>Engenharia de Software aplicada a Sistemas de CRM e Automação</strong><br />
+                    <em>BeHealth — Hub de Saúde | Engenheiro de Software (Arquitetura, Integrações e Dados) · 2025 – atual</em>
                     <ul style={{ marginTop: '10px' }}>
                         <li>
                             Desenvolvimento e evolução de automações críticas em CRM (ActiveCampaign),
