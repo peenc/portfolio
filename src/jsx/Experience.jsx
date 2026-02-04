@@ -35,6 +35,10 @@ export default function Experience() {
                             fluxos, formulários simplificados e conformidade com LGPD.
                         </li>
                         <li>
+                            Desenvolvimento de sistema de notificações por e-mail integrado às automações de CRM,
+                            utilizando HTML, CSS e Google Apps Script, acompanhando todo o ciclo de vida de encaminhamentos entre profissionais.
+                        </li>
+                        <li>
                             Estruturação e enriquecimento de bases de dados operacionais, possibilitando
                             métricas de retenção, presença e ciclo de vida de pacientes.
                         </li>
