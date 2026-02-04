@@ -5,6 +5,7 @@ export default function Contact() {
     return (
         <InfoSection id="contato" title="Contato">
             <p>Email: <a href="mailto:pedro_cardoso@ufrrj.br">pedro_cardoso@ufrrj.br</a></p>
+            <p>Aberto a novas oportunidades, projetos e colaborações.</p>
             <p>Rio de Janeiro – RJ</p>
         </InfoSection>
     );

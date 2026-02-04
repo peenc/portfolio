@@ -113,47 +113,47 @@ export default function Home() {
                     <h3 style={{ marginTop: '20px' }}>Conhecimentos Técnicos</h3>
                     <ul>
                         <li>
-                            <strong>Engenharia de Software & Automação:</strong>
+                            <strong>Engenharia de Software & Automação: </strong>
                              Arquitetura de sistemas, automações em CRM, prevenção de falhas e loops,
                             documentação técnica e padronização.
                         </li>
                         <li>
                             <strong>CRM & Automação: </strong>
-                             ActiveCampaign, Hilos, AppScript, Typeform, automações baseadas em regras de negócio.
+                            ActiveCampaign, Hilos, AppScript, Typeform, automações baseadas em regras de negócio.
                         </li>
                         <li>
-                            <strong>Dados & Analytics:</strong>
-                             Modelagem e governança de dados, qualidade e enriquecimento de dados,
+                            <strong>Dados & Analytics: </strong>
+                            Modelagem e governança de dados, qualidade e enriquecimento de dados,
                             métricas operacionais e KPIs, Google Sheets, Looker Studio, SQL.
                         </li>
                         <li>
-                            <strong>Integrações:</strong>
-                             APIs REST, Webhooks, JSON, integrações entre sistemas e plataformas externas.
+                            <strong>Integrações: </strong>
+                            APIs REST, Webhooks, JSON, integrações entre sistemas e plataformas externas.
                         </li>
                         <li>
-                            <strong>Back-end:</strong>
-                             Java, Spring Boot, Spring Security, desenvolvimento de APIs REST,
+                            <strong>Back-end: </strong>
+                            Java, Spring Boot, Spring Security, desenvolvimento de APIs REST,
                             autenticação e controle de acesso.
                         </li>
                         <li>
-                            <strong>Front-end:</strong>
-                             React, Thymeleaf, HTML, CSS, Bootstrap, Tailwind CSS.
+                            <strong>Front-end: </strong>
+                            React, Thymeleaf, HTML, CSS, Bootstrap, Tailwind CSS.
                         </li>
                         <li>
-                            <strong>Banco de Dados:</strong>
-                             MySQL, PostgreSQL, H2, MongoDB.
+                            <strong>Banco de Dados: </strong>
+                            MySQL, PostgreSQL, H2, MongoDB.
                         </li>
                         <li>
-                            <strong>Linguagens & Scripts:</strong>
+                            <strong>Linguagens & Scripts: </strong>
                              Java, Python, JavaScript, AppScript, SQL.
                         </li>
                         <li>
-                            <strong>Ferramentas:</strong>
-                             Git, GitHub, Postman, JUnit, IntelliJ, Eclipse, VSCode, Jira, Trello, Notion.
+                            <strong>Ferramentas: </strong>
+                            Git, GitHub, Postman, JUnit, IntelliJ, Eclipse, VSCode, Jira, Trello, Notion.
                         </li>
                         <li>
-                            <strong>Fundamentos:</strong>
-                             Engenharia de Software, Arquitetura de Sistemas, MVC, Microsserviços,
+                            <strong>Fundamentos: </strong>
+                            Engenharia de Software, Arquitetura de Sistemas, MVC, Microsserviços,
                             Lógica de Programação.
                         </li>
                     </ul>

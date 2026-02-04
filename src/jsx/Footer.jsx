@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 export default function Footer() {
     return (
         <footer className="home-footer">
-            <p>© 2025 Pedro Nunes Cardoso. Todos os direitos reservados.</p>
+            <p>© 2026 Pedro Nunes Cardoso. Todos os direitos reservados.</p>
             <div className="social-icons">
                 <a href="https://github.com/peenc" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <FaGithub size={30} />
