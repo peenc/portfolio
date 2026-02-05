@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import InfoSection from "./InfoSection.jsx";
 
 export default function ProjectsCarousel({ projects }) {
     const carouselRef = useRef(null);
@@ -30,8 +31,7 @@ export default function ProjectsCarousel({ projects }) {
     }, []);
 
     return (
-        <section id="projetos" className="projects-section">
-            <h2>Projetos em Destaque</h2>
+        <InfoSection  id="projetos" title="Projetos em Destaque">
             <div className="carousel-wrapper">
                 <button className="carousel-btn left" onClick={() => scrollCarousel('left')}>◀</button>
 
@@ -55,6 +55,6 @@ export default function ProjectsCarousel({ projects }) {
 
                 <button className="carousel-btn right" onClick={() => scrollCarousel('right')}>▶</button>
             </div>
-        </section>
+        </InfoSection>
     );
 }

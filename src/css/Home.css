@@ -6,7 +6,12 @@
     padding: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #24355f;
-    background-color: #f9f9f9;
+    background: radial-gradient(
+            circle at top,
+            #eef3ff 0%,
+            #f9f9f9 40%,
+            #f1f4ff 100%
+    );
 }
 .nav-container {
     display: flex;
@@ -43,13 +48,27 @@
 
 
 .home-header {
-    text-align: center;
-    background-color: #24355f;
-    color: #a8b9d9;
-    padding: 30px 20px;
-    border-radius: 8px;
-    margin-bottom: 40px;
+    background: linear-gradient(135deg, #24355f, #1c6cc1);
+    color: #eaf0ff;
+    padding: 60px 30px;
+    border-radius: 20px;
+    margin-bottom: 60px;
+    box-shadow: 0 20px 50px rgba(28, 108, 193, 0.25);
+    position: relative;
+    overflow: hidden;
 }
+
+.home-header::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255,255,255,0.15), transparent);
+    border-radius: 50%;
+}
+
 
 .home-header h2 {
     margin: 0 0 10px;
@@ -160,41 +179,50 @@
 }
 
 .btn {
-    padding: 8px 16px;
-    border-radius: 20px;
+    padding: 10px 22px;
+    border-radius: 999px;
     font-weight: 600;
-    cursor: pointer;
+    letter-spacing: 0.3px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    color: #fff;
     text-decoration: none;
-    color: white;
-    transition: background-color 0.3s ease;
-    user-select: none;
+}
+
+
+.btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
 .btn-github {
-    background-color: #3498db;
-}
-
-.btn-github:hover {
-    background-color: #1c6cc1;
+    background: linear-gradient(135deg, #3498db, #1c6cc1);
 }
 
 .btn-online {
-    background-color: #7f8c8d;
-}
-
-.btn-online:hover {
-    background-color: #566969;
+    background: linear-gradient(135deg, #7f8c8d, #566969);
 }
 
 
 .info-section, .contact-section {
-    background-color: white;
-    padding: 25px 20px;
-    border-radius: 8px;
-    margin-bottom: 40px;
-    color: #333;
-    line-height: 1.6;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 35px;
+    box-shadow:
+            0 10px 30px rgba(36, 53, 95, 0.08),
+            inset 0 1px 0 rgba(255,255,255,0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.info-section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 45px rgba(36, 53, 95, 0.15);
+}
+
 
 .info-section h2, .contact-section h2 {
     font-weight: 700;
@@ -203,6 +231,10 @@
     padding-bottom: 6px;
     margin-bottom: 20px;
     color: #24355f;
+}
+
+.info-section:nth-of-type(even) {
+    background: rgba(245, 248, 255, 0.95);
 }
 
 /* Footer */
@@ -217,22 +249,24 @@
 
 
 .carousel::-webkit-scrollbar {
-    height: 8px;
+    height: 6px;
 }
 
 .carousel::-webkit-scrollbar-thumb {
-    background-color: #3498db;
-    border-radius: 10px;
+    background: linear-gradient(135deg, #3498db, #1c6cc1);
+    border-radius: 999px;
 }
 
 .carousel::-webkit-scrollbar-track {
-    background-color: #eaeaea;
+    background-color: transparent;
 }
+
 
 .carousel-item p {
     font-size: 0.95rem;
-    color: #555;
-    margin-bottom: 12px;
+    color: #5a5a5a;
+    margin-bottom: 14px;
+    line-height: 1.45;
 
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -240,6 +274,16 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.carousel-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 16px 40px rgba(36, 53, 95, 0.18);
+}
+
 
 .social-icons {
     margin-top: 15px;
