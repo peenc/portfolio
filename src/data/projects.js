@@ -106,4 +106,32 @@ export const projects = [
         mapa: "MapLibre",
         banco: "MySQL (planejado)"
     },
+    {
+        id: "fitcommerce",
+        title: "Fit Commerce",
+        description: "Fitcommerce é um sistema de e-commerce genérico que serve para qualquer tipo de nicho de vendas, nesse caso foi atribuído produtos fitness pois é o nicho do cliente",
+        githubUrl: "https://github.com/peenc/ecommerce",
+        online: "https://meu-site.com/fitcommerce",
+        img: "/images/fitcommerce.png",
+        tecnologias: ["HTML", "TailwindCSS", "JavaScript","TypeScript", "Edge", "AdonisJs", "SQLite"],
+        mapa: "",
+        status: [
+            "✅ Produtos cadastrados disnponíveis para venda",
+            "✅ Página própria de gestão de estoque disponível para venda",
+            "✅ Autenticação de usuário para vinculação de compras",
+            "✅ Interface responsiva com TailwindCSS",
+            "✅ Menu de atualização de cadastro",
+            "✅ Carrinho de compras",
+            "✅ Sistema de paginação para não haver centenas de produtos de uma vez na tela"
+        ],
+        futuro: [
+            "Pagamento via Pix/Cartão",
+            "Sistema de rastreamento de encomenda",
+            "Página para FAQ",
+            "Versão mobile PWA",
+        ],
+        backend: "AdonisJS + TypeScript (em desenvolvimento)",
+        frontend: "HTML5, TailwindCSS, JavaScript, Edge",
+        banco: "SQLite",
+    },
 ];

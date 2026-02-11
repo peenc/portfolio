@@ -1,49 +1,11 @@
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-    background: linear-gradient(
-            180deg,
-            #d4dced 0%,
-            #eef2fb 100%
-    );
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
 }
-
-
-header {
-    text-align: center;
-    padding: 28px 0;
-    background: linear-gradient(135deg, #24355f, #1c2b4a);
-    color: white;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-}
-
-
-section {
-    max-width: 1080px;
-    margin: 50px auto;
-    padding: 32px 28px;
-
-    background-color: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 12px 30px rgba(36, 53, 95, 0.12);
-}
-
-footer {
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 60px;
-
-    color: #777;
-    font-size: 0.9rem;
-    background-color: transparent;
-}
-
-* {
-    transition: background-color 0.25s ease,
-    color 0.25s ease,
-    box-shadow 0.25s ease;
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
