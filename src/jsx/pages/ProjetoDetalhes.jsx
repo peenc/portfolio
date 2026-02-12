@@ -4,7 +4,7 @@ import React from "react";
 import Footer from "../Footer.jsx";
 
 export default function ProjetoDetalhes() {
-    const { id } = useParams();
+    const {id} = useParams();
     const navigate = useNavigate();
 
     const projeto = projects.find(
@@ -13,77 +13,87 @@ export default function ProjetoDetalhes() {
 
     if (!projeto) {
         return (
-            <div className="min-h-screen bg-slate-100 flex flex-col">
-                <div className="max-w-4xl mx-auto w-full p-6">
+            <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-slate-950 transition-colors">
+                <div className="max-w-5xl mx-auto w-full px-6 py-24 flex-1">
                     <button
                         onClick={() => navigate(-1)}
-                        className="mb-6 text-blue-600 hover:text-blue-800 font-medium"
+                        className="mb-8 text-blue-600 dark:text-blue-400 hover:opacity-70 transition"
                     >
                         ← Voltar
                     </button>
 
-                    <div className="bg-white rounded-2xl shadow-lg p-8">
-                        <h2 className="text-2xl font-bold mb-4">
+                    <div
+                        className="rounded-2xl p-10 bg-white/70 dark:bg-slate-900/60 backdrop-blur border border-gray-200 dark:border-slate-800 shadow-xl">
+                        <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
                             Projeto não encontrado
                         </h2>
-                        <p className="text-gray-600">
+                        <p className="text-gray-600 dark:text-slate-400">
                             Não conseguimos localizar esse projeto. Verifique o link.
                         </p>
                     </div>
                 </div>
-                <Footer />
+                <Footer/>
             </div>
         );
     }
 
     return (
-        <div className="min-h-screen bg-slate-100 flex flex-col">
-            <div className="max-w-4xl mx-auto w-full p-6 flex-1">
+        <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-slate-950 transition-colors">
 
-                {/* Navbar interna */}
-                <div className="flex items-center justify-between mb-8">
-                    <button
-                        onClick={() => navigate(-1)}
-                        className="text-blue-600 hover:text-blue-800 font-medium"
-                    >
-                        ← Voltar
-                    </button>
+            <div className="max-w-6xl mx-auto w-full px-6 md:px-10 lg:px-20 py-20 flex-1">
 
-                    <h1 className="text-2xl font-bold text-slate-800">
+                {/* Botão Voltar */}
+                <button
+                    onClick={() => navigate(-1)}
+                    className="mb-10 text-sm font-medium
+                           text-gray-600 dark:text-slate-400
+                           hover:text-blue-600 dark:hover:text-blue-400
+                           transition"
+                >
+                    ← Voltar para projetos
+                </button>
+
+                {/* Título centralizado */}
+                <div className="mb-16 text-center">
+                    <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
                         {projeto.title}
                     </h1>
+
+                    <p className="mt-4 text-lg text-gray-600 dark:text-slate-400 max-w-2xl mx-auto">
+                        {projeto.description}
+                    </p>
                 </div>
 
                 {/* Card principal */}
-                <div className="bg-white rounded-2xl shadow-xl p-8 space-y-8">
-
-                    <p className="text-gray-700 leading-relaxed text-lg">
-                        {projeto.description}
-                    </p>
+                <div className="rounded-3xl p-12 space-y-14
+                            bg-white/70 dark:bg-slate-900/60
+                            backdrop-blur
+                            border border-gray-200 dark:border-slate-800
+                            shadow-xl">
 
                     {/* Status */}
                     {projeto.status && (
                         <div>
-                            <h3 className="text-xl font-semibold mb-3">
-                                Status do Projeto
+                            <h3 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">
+                                Status
                             </h3>
-                            <ul className="list-disc list-inside space-y-1 text-gray-700">
+                            <ul className="space-y-3 text-gray-700 dark:text-slate-300">
                                 {projeto.status.map((item, idx) => (
-                                    <li key={idx}>{item}</li>
+                                    <li key={idx}>• {item}</li>
                                 ))}
                             </ul>
                         </div>
                     )}
 
-                    {/* Futuro */}
+                    {/* Próximos Passos */}
                     {projeto.futuro && (
                         <div>
-                            <h3 className="text-xl font-semibold mb-3">
-                                Funcionalidades Planejadas
+                            <h3 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">
+                                Próximos Passos
                             </h3>
-                            <ul className="list-disc list-inside space-y-1 text-gray-700">
+                            <ul className="space-y-3 text-gray-700 dark:text-slate-300">
                                 {projeto.futuro.map((item, idx) => (
-                                    <li key={idx}>{item}</li>
+                                    <li key={idx}>• {item}</li>
                                 ))}
                             </ul>
                         </div>
@@ -91,49 +101,51 @@ export default function ProjetoDetalhes() {
 
                     {/* Tecnologias */}
                     <div>
-                        <h3 className="text-xl font-semibold mb-3">
-                            Tecnologias Utilizadas
+                        <h3 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">
+                            Stack Técnica
                         </h3>
 
-                        <ul className="space-y-1 text-gray-700">
-                            <li><strong>Frontend:</strong> {projeto.frontend}</li>
+                        <div className="grid md:grid-cols-2 gap-6 text-gray-700 dark:text-slate-300">
+                            <div><strong>Frontend:</strong> {projeto.frontend}</div>
                             {projeto.mapa && (
-                                <li><strong>Mapa:</strong> {projeto.mapa}</li>
+                                <div><strong>Mapa:</strong> {projeto.mapa}</div>
                             )}
-                            <li><strong>Backend:</strong> {projeto.backend}</li>
-                            <li><strong>Banco de Dados:</strong> {projeto.banco}</li>
+                            <div><strong>Backend:</strong> {projeto.backend}</div>
+                            <div><strong>Banco:</strong> {projeto.banco}</div>
 
-                            {projeto.tecnologias && projeto.tecnologias.length > 0 && (
-                                <li>
-                                    <strong>Geral:</strong>{" "}
-                                    {projeto.tecnologias.join(", ")}
-                                </li>
+                            {projeto.tecnologias && (
+                                <div className="md:col-span-2">
+                                    <strong>Geral:</strong> {projeto.tecnologias.join(", ")}
+                                </div>
                             )}
-                        </ul>
+                        </div>
                     </div>
 
                     {/* Imagem */}
                     {projeto.img && (
                         <div>
-                            <h3 className="text-xl font-semibold mb-4">
-                                Imagens do Projeto
+                            <h3 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">
+                                Visual do Projeto
                             </h3>
                             <img
                                 src={projeto.img}
                                 alt={projeto.title}
-                                className="rounded-xl shadow-md w-full object-cover"
+                                className="rounded-2xl shadow-lg w-full object-cover border border-gray-200 dark:border-slate-800"
                             />
                         </div>
                     )}
 
                     {/* Botões */}
-                    <div className="flex flex-wrap gap-4 pt-4">
+                    <div className="flex flex-wrap gap-6 pt-6 justify-center">
                         {projeto.githubUrl && (
                             <a
                                 href={projeto.githubUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="px-6 py-2 bg-gray-900 text-white rounded-xl hover:bg-gray-800 transition"
+                                className="px-8 py-3 rounded-xl
+                                       bg-slate-900 dark:bg-slate-800
+                                       text-white
+                                       hover:scale-105 transition-all duration-300"
                             >
                                 GitHub
                             </a>
@@ -144,7 +156,11 @@ export default function ProjetoDetalhes() {
                                 href={projeto.online}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="px-6 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition"
+                                className="px-8 py-3 rounded-xl
+                                       bg-blue-600 hover:bg-blue-500
+                                       text-white
+                                       shadow-md shadow-blue-600/30
+                                       transition-all duration-300"
                             >
                                 Ver Online
                             </a>
@@ -152,8 +168,6 @@ export default function ProjetoDetalhes() {
                     </div>
                 </div>
             </div>
-
-            <Footer />
         </div>
     );
 }
