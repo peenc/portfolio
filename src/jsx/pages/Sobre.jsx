@@ -90,9 +90,8 @@ export default function Sobre() {
                                 </p>
                             </div>
 
-                            {/* Logo + Link mais elegante */}
                             <a
-                                href="https://site-da-behealth.com"
+                                href="https://behealth.com.br/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group flex items-center gap-4"
