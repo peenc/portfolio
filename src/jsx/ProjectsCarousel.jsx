@@ -62,8 +62,11 @@ export default function ProjectsCarousel({ projects }) {
                         Projetos
                     </h2>
                     <p className="mt-4 text-lg text-gray-600 dark:text-slate-400">
-                        Construídos com foco em performance e escalabilidade.
+                        Projetos desenvolvidos com foco em arquitetura, organização de código,
+                        boas práticas de engenharia de software e integração entre sistemas.
+                        Cada solução representa aplicação prática de conceitos acadêmicos e experiência profissional.
                     </p>
+
                 </div>
 
                 {/* CAROUSEL */}

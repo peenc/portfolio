@@ -12,7 +12,7 @@ function App() {
     return (
         <Router>
             <div className="min-h-screen flex flex-col
-                            bg-white dark:bg-slate-950
+                            bg-slate-50 dark:bg-slate-950
                             text-gray-900 dark:text-gray-200
                             transition-colors duration-300">
 

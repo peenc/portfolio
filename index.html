@@ -18,6 +18,15 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/png" />
 
+    <!-- 🔥 Força dark como padrão -->
+    <script>
+        const theme = localStorage.getItem("theme");
+        if (theme === "light") {
+            document.documentElement.classList.remove("dark");
+        } else {
+            document.documentElement.classList.add("dark");
+        }
+    </script>
 </head>
 
 <body>

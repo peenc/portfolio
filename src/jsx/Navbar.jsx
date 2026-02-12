@@ -6,17 +6,17 @@ import { Moon, Sun } from "lucide-react";
 export default function Navbar() {
     const [darkMode, setDarkMode] = useState(true);
 
-    // Detecta preferência salva ou do sistema
     useEffect(() => {
         const savedTheme = localStorage.getItem("theme");
 
         if (savedTheme) {
             setDarkMode(savedTheme === "dark");
         } else {
-            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-            setDarkMode(prefersDark);
+            // Força dark como padrão
+            setDarkMode(true);
         }
     }, []);
+
 
     // Aplica tema
     useEffect(() => {
@@ -36,7 +36,7 @@ export default function Navbar() {
                         border-b border-slate-200 dark:border-slate-800
                         transition-colors duration-300">
 
-            <div className="max-w-6xl mx-auto px-6 py-4
+            <div className="max-w-[1400px] mx-auto px-6 py-4
                             flex justify-between items-center">
 
                 {/* Logo */}
