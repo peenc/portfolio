@@ -17,7 +17,7 @@ export default function ProjetoDetalhes() {
                 <div className="max-w-5xl mx-auto w-full px-6 py-24 flex-1">
                     <button
                         onClick={() => navigate(-1)}
-                        className="mb-8 text-blue-600 dark:text-blue-400 hover:opacity-70 transition"
+                        className="mb-8 text-cyan-600 dark:text-cyan-400 hover:opacity-70 transition"
                     >
                         ← Voltar
                     </button>
@@ -47,7 +47,7 @@ export default function ProjetoDetalhes() {
                     onClick={() => navigate(-1)}
                     className="mb-10 text-sm font-medium
                            text-gray-600 dark:text-slate-400
-                           hover:text-blue-600 dark:hover:text-blue-400
+                           hover:text-cyan-600 dark:hover:text-cyan-400
                            transition"
                 >
                     ← Voltar para projetos
@@ -157,7 +157,7 @@ export default function ProjetoDetalhes() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="px-8 py-3 rounded-xl
-                                       bg-blue-600 hover:bg-blue-500
+                                       bg-cyan-600 hover:bg-cyan-500
                                        text-white
                                        shadow-md shadow-blue-600/30
                                        transition-all duration-300"

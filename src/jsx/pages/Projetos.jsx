@@ -32,7 +32,7 @@ export default function Projetos() {
                             href="/TCC_Capiwallet.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="px-5 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition"
+                            className="px-5 py-2 rounded-lg bg-cyan-600 hover:bg-cyan-700 text-white text-sm font-medium transition"
                         >
                             Ver Documento
                         </a>

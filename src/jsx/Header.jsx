@@ -35,8 +35,8 @@ export default function Header() {
                         px-4 py-1.5
                         text-sm font-medium
                         rounded-full
-                        bg-blue-100 text-blue-700
-                        dark:bg-blue-500/10 dark:text-blue-400
+                        bg-blue-100 text-cyan-700
+                        dark:bg-blue-500/10 dark:text-cyan-400
                         border border-blue-200 dark:border-blue-500/30
                     ">
                         💻 Software Engineer em evolução constante
@@ -53,8 +53,8 @@ export default function Header() {
                         <br />
                         <span className="
                             bg-gradient-to-r
-                            from-blue-600 to-cyan-500
-                            dark:from-blue-400 dark:to-cyan-400
+                            from-cyan-600 to-cyan-500
+                            dark:from-cyan-400 dark:to-cyan-400
                             bg-clip-text text-transparent
                         ">
                             simples, escaláveis
@@ -85,10 +85,10 @@ export default function Header() {
                             to="/projetos"
                             className="
                                 px-7 py-3.5 rounded-xl
-                                bg-blue-600 hover:bg-blue-500
+                                bg-cyan-600 hover:bg-cyan-500
                                 text-white font-medium
                                 transition-all duration-300
-                                shadow-lg shadow-blue-600/30
+                                shadow-lg shadow-cyan-600/30
                                 hover:-translate-y-0.5
                             "
                         >
@@ -102,7 +102,7 @@ export default function Header() {
                                 border border-gray-300
                                 dark:border-slate-700
                                 text-gray-800 dark:text-slate-200
-                                hover:border-blue-500
+                                hover:border-cyan-500
                                 transition-all duration-300
                             "
                         >

@@ -140,7 +140,7 @@ export default function ProjectsCarousel({ projects }) {
                             bg-white/70 dark:bg-slate-900/60
                             backdrop-blur-xl
                             transition-all duration-500
-                            hover:border-blue-500
+                            hover:border-cyan-500
                             hover:shadow-[0_0_60px_rgba(59,130,246,0.15)]
                         "
                                     >
@@ -171,9 +171,9 @@ export default function ProjectsCarousel({ projects }) {
                                                     className="
                                         inline-block
                                         px-8 py-3 rounded-xl
-                                        bg-blue-600 text-white
-                                        hover:bg-blue-500
-                                        shadow-lg shadow-blue-600/20
+                                        bg-cyan-600 text-white
+                                        hover:bg-cyan-500
+                                        shadow-lg shadow-cyan-600/20
                                         transition
                                     "
                                                 >
@@ -199,7 +199,7 @@ export default function ProjectsCarousel({ projects }) {
                                 h-2 rounded-full transition-all duration-300
                                 ${
                                 index === current
-                                    ? "w-8 bg-blue-600"
+                                    ? "w-8 bg-cyan-600"
                                     : "w-2 bg-gray-300 dark:bg-slate-700"
                             }
                             `}

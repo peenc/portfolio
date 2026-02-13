@@ -17,10 +17,10 @@ export default function OtherProjects() {
 
                     transition-all duration-300
                     hover:shadow-xl hover:-translate-y-1
-                    hover:border-blue-500
+                    hover:border-cyan-500
                 "
                 >
-                    <div className="h-1 w-10 rounded-full bg-blue-500 mb-4" />
+                    <div className="h-1 w-10 rounded-full bg-cyan-500 mb-4" />
 
                     <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
                         Compilador
@@ -39,10 +39,10 @@ export default function OtherProjects() {
                     bg-white/70 dark:bg-slate-900/60
                     backdrop-blur-xl
                     transition-all duration-300
-                    hover:border-blue-500
+                    hover:border-cyan-500
                     hover:shadow-[0_0_40px_rgba(59,130,246,0.15)]
                 ">
-                    <div className="h-1 w-10 rounded-full bg-blue-500 mb-4" />
+                    <div className="h-1 w-10 rounded-full bg-cyan-500 mb-4" />
 
                     <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
                         Gerenciador de Senhas
@@ -60,10 +60,10 @@ export default function OtherProjects() {
                     bg-white/70 dark:bg-slate-900/60
                     backdrop-blur-xl
                     transition-all duration-300
-                    hover:border-blue-500
+                    hover:border-cyan-500
                     hover:shadow-[0_0_40px_rgba(59,130,246,0.15)]
                 ">
-                    <div className="h-1 w-10 rounded-full bg-blue-500 mb-4" />
+                    <div className="h-1 w-10 rounded-full bg-cyan-500 mb-4" />
 
                     <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
                         To-Do List Colaborativa

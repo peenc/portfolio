@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../Header.jsx";
 import ProjectsCarousel from "../ProjectsCarousel.jsx";
 import Contact from "../Contact.jsx";
+import CTAFlutuante from "../CTAFlutuante.jsx";
 
 const projects = [
     {
@@ -41,7 +42,7 @@ export default function Home() {
             <Header />
             <ProjectsCarousel projects={projects} />
             <Contact />
-
+            <CTAFlutuante />
         </>
     );
 }

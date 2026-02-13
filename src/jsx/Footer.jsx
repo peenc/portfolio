@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
     return (
-        <footer className="border-t border-slate-800
+        <footer className="border-t dark:border-slate-800
                            mt-20 py-10">
 
             <div className="max-w-6xl mx-auto px-6
@@ -20,7 +20,7 @@ export default function Footer() {
                         href="https://github.com/peenc"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-blue-400 transition"
+                        className="hover:text-cyan-400 transition"
                     >
                         <FaGithub size={22} />
                     </a>
@@ -29,7 +29,7 @@ export default function Footer() {
                         href="https://www.linkedin.com/in/pedro-nunes-683824230/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-blue-400 transition"
+                        className="hover:text-cyan-400 transition"
                     >
                         <FaLinkedin size={22} />
                     </a>

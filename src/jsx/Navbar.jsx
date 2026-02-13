@@ -44,7 +44,7 @@ export default function Navbar() {
                     to="/"
                     className="text-xl font-bold tracking-tight
                                text-gray-900 dark:text-white
-                               hover:text-blue-500 transition"
+                               hover:text-cyan-500 transition"
                 >
                     Pedro.dev
                 </Link>
@@ -54,15 +54,15 @@ export default function Navbar() {
                                 text-gray-700 dark:text-slate-300
                                 items-center">
 
-                    <Link to="/projetos" className="hover:text-blue-500 transition">
+                    <Link to="/projetos" className="hover:text-cyan-500 transition">
                         Projetos
                     </Link>
 
-                    <Link to="/sobre" className="hover:text-blue-500 transition">
+                    <Link to="/sobre" className="hover:text-cyan-500 transition">
                         Sobre
                     </Link>
 
-                    <Link to="/curriculo" className="hover:text-blue-500 transition">
+                    <Link to="/curriculo" className="hover:text-cyan-500 transition">
                         Currículo
                     </Link>
 
@@ -71,7 +71,7 @@ export default function Navbar() {
                         href="https://github.com/peenc"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-blue-500 transition"
+                        className="hover:text-cyan-500 transition"
                     >
                         <FaGithub size={18} />
                     </a>

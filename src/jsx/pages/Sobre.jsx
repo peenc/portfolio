@@ -13,7 +13,7 @@ export default function Sobre() {
             <section className="text-center space-y-6">
                 <h1 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
                     Transformo desafios técnicos em
-                    <span className="text-blue-600 dark:text-blue-400"> soluções simples e escaláveis</span>.
+                    <span className="text-cyan-600 dark:text-cyan-400"> soluções simples e escaláveis</span>.
                 </h1>
 
                 <p className="max-w-3xl mx-auto text-gray-700 dark:text-slate-300 text-lg leading-relaxed">

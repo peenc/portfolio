@@ -29,7 +29,7 @@ export default function Curriculo() {
                             href="/curriculo-pedro-nunes.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-block px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-medium shadow-md hover:shadow-lg transition duration-300"
+                            className="inline-block px-6 py-3 rounded-xl bg-cyan-600 hover:bg-cyan-700 text-white font-medium shadow-md hover:shadow-lg transition duration-300"
                         >
                             Baixar Currículo em PDF
                         </a>
