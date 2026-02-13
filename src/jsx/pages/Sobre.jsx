@@ -12,8 +12,8 @@ export default function Sobre() {
             {/* HERO SOBRE */}
             <section className="text-center space-y-6">
                 <h1 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
-                    Engenharia de software orientada a
-                    <span className="text-blue-600 dark:text-blue-400"> resolver problemas complexos</span>.
+                    Transformo desafios técnicos em
+                    <span className="text-blue-600 dark:text-blue-400"> soluções simples e escaláveis</span>.
                 </h1>
 
                 <p className="max-w-3xl mx-auto text-gray-700 dark:text-slate-300 text-lg leading-relaxed">
