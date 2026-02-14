@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import {useRevealOnScroll} from "./hooks/useRevealOnScroll.js";
 
 export default function ProjectsCarousel({ projects }) {
     const [current, setCurrent] = useState(0);
@@ -33,10 +34,23 @@ export default function ProjectsCarousel({ projects }) {
         clearInterval(intervalRef.current);
     };
 
+    const { ref, isVisible } = useRevealOnScroll();
     return (
-        <section className="relative overflow-hidden py-28">
+        <section
+            className="relative overflow-hidden py-28">
 
-            {/* Background grid */}
+            <div
+                ref={ref}
+                className={`
+            transition-all duration-1000 ease-[cubic-bezier(.22,1,.36,1)]
+            ${isVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-4"
+                }
+        `}
+            >
+
+        {/* Background grid */}
             <div className="
                 absolute inset-0 -z-10
                 bg-[linear-gradient(to_right,rgba(0,0,0,0.04)_1px,transparent_1px),
@@ -207,6 +221,7 @@ export default function ProjectsCarousel({ projects }) {
                     ))}
                 </div>
 
+            </div>
             </div>
         </section>
     );

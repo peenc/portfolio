@@ -1,10 +1,22 @@
 import InfoSection from "../InfoSection.jsx";
 import React from "react";
+import {useRevealOnScroll} from "../hooks/useRevealOnScroll.js";
 
 export default function Sobre() {
+    const { ref, isVisible } = useRevealOnScroll();
+
     return (
         <div className="relative max-w-6xl mx-auto px-6 py-16 space-y-24">
-
+            <div
+                ref={ref}
+                className={`
+            transition-all duration-1000 ease-[cubic-bezier(.22,1,.36,1)]
+            ${isVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-4"
+                }
+        `}
+            >
             {/* Background Blur Effects */}
             <div className="absolute top-0 left-0 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl -z-10"></div>
             <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl -z-10"></div>
@@ -135,7 +147,7 @@ export default function Sobre() {
 
                 </div>
             </InfoSection>
-
+            </div>
         </div>
     );
 }

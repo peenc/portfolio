@@ -6,7 +6,7 @@ export default function CTAFlutuante() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setVisible(true);
-        }, 2000);
+        }, 10000);
 
         return () => clearTimeout(timer);
     }, []);

@@ -1,11 +1,23 @@
 import InfoSection from "../InfoSection.jsx";
 import CurrentLearning from "../CurrentLearning.jsx";
 import React from "react";
+import {useRevealOnScroll} from "../hooks/useRevealOnScroll.js";
 
 export default function Curriculo() {
+    const { ref, isVisible } = useRevealOnScroll();
     return (
         <div className="max-w-5xl mx-auto space-y-16">
 
+            <div
+                ref={ref}
+                className={`
+            transition-all duration-1000 ease-[cubic-bezier(.22,1,.36,1)]
+            ${isVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-4"
+                }
+        `}
+            >
             {/* RESUMO PROFISSIONAL */}
             <InfoSection id="resumo" title="Resumo Profissional">
                 <div className="space-y-6 text-gray-800 dark:text-slate-300 leading-relaxed">
@@ -132,6 +144,7 @@ export default function Curriculo() {
 
             <CurrentLearning />
 
+            </div>
         </div>
     );
 }

@@ -7,6 +7,7 @@ import Sobre from "./pages/Sobre.jsx";
 import Projetos from "./pages/Projetos.jsx";
 import Curriculo from "./pages/Curriculo.jsx";
 import ProjetoDetalhes from "./pages/ProjetoDetalhes.jsx";
+import ScrollToTop from "./hooks/ScrollToTop.jsx";
 
 function App() {
     return (
@@ -17,7 +18,7 @@ function App() {
                             transition-colors duration-300">
 
                 <Navbar />
-
+                <ScrollToTop />
                 <main className="flex-1 pt-24 px-6 md:px-10 lg:px-16">
 
                 <Routes>
