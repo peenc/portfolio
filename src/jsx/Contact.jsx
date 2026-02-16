@@ -34,11 +34,11 @@ export default function Contact() {
     };
 
     return (
-        <InfoSection id="contato" title="Contato">
-            <div className="grid gap-12 md:gap-16 md:grid-cols-2 items-start">
+        <InfoSection id="contato" title="Contato" >
+            <div className="grid gap-12 md:gap-16 md:grid-cols-2 items-start ">
 
                 {/* INFO */}
-                <div className="space-y-6 md:space-y-8 text-center md:text-left">
+                <div className="space-y-6 md:space-y-8 text-center md:text-left ">
 
                     <div>
                         <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-white mb-3">
@@ -81,11 +81,11 @@ export default function Contact() {
                     className="
                         border border-gray-200 dark:border-slate-800
                         rounded-2xl md:rounded-3xl
-                        bg-white/80 dark:bg-slate-900/60
+                        bg-white dark:bg-slate-900/40
                         backdrop-blur-xl
                         p-6 sm:p-8 md:p-10
                         space-y-5 md:space-y-6
-                        shadow-xl
+                        shadow-md
                         transition-all duration-500
                     "
                 >
@@ -115,7 +115,7 @@ export default function Contact() {
                             className="
                                 w-full rounded-xl px-4 py-3
                                 text-sm sm:text-base
-                                bg-white dark:bg-slate-950
+                                bg-white dark:bg-slate-900/40
                                 border border-gray-300 dark:border-slate-700
                                 text-gray-900 dark:text-white
                                 focus:outline-none focus:ring-2 focus:ring-cyan-500
@@ -136,7 +136,7 @@ export default function Contact() {
                             className="
                                 w-full rounded-xl px-4 py-3
                                 text-sm sm:text-base
-                                bg-white dark:bg-slate-950
+                                bg-white dark:bg-slate-900/40
                                 border border-gray-300 dark:border-slate-700
                                 text-gray-900 dark:text-white
                                 focus:outline-none focus:ring-2 focus:ring-cyan-500
@@ -157,7 +157,7 @@ export default function Contact() {
                             className="
                                 w-full rounded-xl px-4 py-3
                                 text-sm sm:text-base
-                                bg-white dark:bg-slate-950
+                                bg-white dark:bg-slate-900/40
                                 border border-gray-300 dark:border-slate-700
                                 text-gray-900 dark:text-white
                                 focus:outline-none focus:ring-2 focus:ring-cyan-500
@@ -178,7 +178,7 @@ export default function Contact() {
                             className="
                                 w-full rounded-xl px-4 py-3
                                 text-sm sm:text-base
-                                bg-white dark:bg-slate-950
+                                bg-white dark:bg-slate-900/40
                                 border border-gray-300 dark:border-slate-700
                                 text-gray-900 dark:text-white
                                 resize-none

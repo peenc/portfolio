@@ -60,7 +60,7 @@ export default function ProjectsCarousel({ projects }) {
     const { ref, isVisible } = useRevealOnScroll();
 
     return (
-        <section className="relative overflow-hidden py-16 md:py-28">
+        <section className="relative overflow-hidden py-16 md:py-28 ">
 
             <div
                 ref={ref}
@@ -108,7 +108,7 @@ export default function ProjectsCarousel({ projects }) {
 
                     {/* CAROUSEL */}
                     <div
-                        className="relative rounded-3xl group"
+                        className="relative rounded-3xl group shadow-md"
                         onMouseEnter={stopAutoPlay}
                         onMouseLeave={startAutoPlay}
                     >
@@ -164,7 +164,7 @@ export default function ProjectsCarousel({ projects }) {
 
                         {/* Slides */}
                         <div
-                            className="overflow-hidden md:overflow-visible"
+                            className="overflow-hidden"
                             onTouchStart={handleTouchStart}
                             onTouchMove={handleTouchMove}
                             onTouchEnd={handleTouchEnd}
@@ -189,7 +189,7 @@ export default function ProjectsCarousel({ projects }) {
                                             className="
                                                 cursor-pointer
                                                 border border-gray-200 dark:border-slate-800
-                                                bg-white/80 dark:bg-slate-900/70
+                                                bg-white dark:bg-slate-900/40
                                                 backdrop-blur-xl
                                                 transition-all duration-300
                                                 rounded-2xl

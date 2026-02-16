@@ -226,7 +226,7 @@ export default function Header() {
 
                         <div className="rounded-2xl border border-gray-200 dark:border-slate-800
                                         bg-white dark:bg-slate-900/40
-                                        p-6 sm:p-8 shadow-2xl
+                                        p-6 sm:p-8 shadow-md
                                         w-full max-w-[620px]
                                         h-auto md:h-full
                                         flex flex-col">

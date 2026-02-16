@@ -4,7 +4,7 @@ export default function InfoSection({ id, title, children }) {
     return (
         <section
             id={id}
-            className="py-12 px-8 max-w-6xl mx-auto text-gray-300"
+            className="py-12 px-8 max-w-6xl mx-auto text-gray-300 "
         >
             {title && (
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center relative">
