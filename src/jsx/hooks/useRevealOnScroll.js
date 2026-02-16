@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-export function useRevealOnScroll(threshold = 0.1) {
+export function useRevealOnScroll(threshold = 0.15) {
     const ref = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
 
