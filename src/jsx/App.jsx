@@ -8,6 +8,7 @@ import Projetos from "./pages/Projetos.jsx";
 import Curriculo from "./pages/Curriculo.jsx";
 import ProjetoDetalhes from "./pages/ProjetoDetalhes.jsx";
 import ScrollToTop from "./hooks/ScrollToTop.jsx";
+import CTAFlutuante from "./CTAFlutuante.jsx";
 
 function App() {
     return (
@@ -29,7 +30,7 @@ function App() {
                         <Route path="/projetos/:id" element={<ProjetoDetalhes />} />
                     </Routes>
                 </main>
-
+                <CTAFlutuante />
                 <Footer />
             </div>
         </Router>

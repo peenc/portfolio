@@ -9,6 +9,7 @@ import Contact from "../Contact.jsx";
 import Footer from "../Footer.jsx";
 import React from "react";
 import {projects} from "../../data/projects.js";
+import CTAFlutuante from "../CTAFlutuante.jsx";
 
 export default function Projetos() {
     return (
@@ -43,6 +44,7 @@ export default function Projetos() {
             </InfoSection>
 
             <OtherProjects/>
+            <CTAFlutuante/>
 
         </div>
     );

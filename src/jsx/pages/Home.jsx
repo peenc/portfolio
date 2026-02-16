@@ -3,6 +3,8 @@ import Header from "../Header.jsx";
 import ProjectsCarousel from "../ProjectsCarousel.jsx";
 import Contact from "../Contact.jsx";
 import CTAFlutuante from "../CTAFlutuante.jsx";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const projects = [
     {
@@ -37,13 +39,27 @@ const projects = [
 
 
 export default function Home() {
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash === "#contato") {
+            const section = document.getElementById("contato");
+
+            if (section) {
+                setTimeout(() => {
+                    section.scrollIntoView({ behavior: "smooth" });
+                }, 100);
+            }
+        }
+    }, [location]);
+
     return (
         <>
 
             <Header />
             <ProjectsCarousel projects={projects} />
             <Contact />
-            <CTAFlutuante />
+
         </>
     );
 }
