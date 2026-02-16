@@ -16,7 +16,7 @@ const projects = [
     },
     {
         title: "Fitcommerce",
-        description: "Sistema de e-commerce genérico pronto para utilização.",
+        description: "Sistema de e-commerce genérico.",
         githubUrl: "https://github.com/peenc/ecommerce",
         online: "#",
         img: "/images/fitcommerce.png",
