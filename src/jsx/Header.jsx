@@ -142,9 +142,7 @@ export default function Header() {
     }, [l5.isTyping, l5.displayedText, hasAnimated]);
 
     return (
-        <section className="relative overflow-hidden bg-white dark:bg-slate-950 ">
-
-
+        <section className="relative overflow-hidden bg-white dark:bg-slate-950 py-16 md:py-24">
         <div className={`transition-all duration-700
                 ${hasAnimated
                 ? (fadeIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4")
