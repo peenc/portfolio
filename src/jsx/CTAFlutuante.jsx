@@ -1,15 +1,17 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-
+import { MessageCircle, X } from "lucide-react";
+import { useLocation } from "react-router-dom";
+import { useThemeLang } from "../context/ThemeLangContext.jsx";
 
 export default function CTAFlutuante() {
     const [visible, setVisible] = useState(false);
     const [minimized, setMinimized] = useState(false);
+    const { t } = useThemeLang();
+    const location = useLocation();
 
     // 🔹 Recupera estado salvo
     useEffect(() => {
         const savedState = localStorage.getItem("ctaMinimized");
-
         if (savedState === "true") {
             setMinimized(true);
         }
@@ -37,32 +39,26 @@ export default function CTAFlutuante() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const navigate = useNavigate();
-
     const goToContact = () => {
-        navigate("/#contato");
+        const phone = "5521973670464";
+        const message = "Olá Pedro! Vim pelo seu portfólio e gostaria de conversar sobre uma oportunidade.";
+        window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
     };
 
-
+    if (location.pathname === "/") return null;
     if (!visible) return null;
 
     return (
-        <div className="fixed bottom-10 right-6 md:right-10 z-[9999]">
+        <div className="fixed bottom-10 right-6 md:right-10 z-[90]">
 
             {/* MODO MINIMIZADO */}
             {minimized && (
                 <button
                     onClick={() => setMinimized(false)}
-                    className="group w-14 h-14 rounded-full
-                               bg-cyan-600 hover:bg-cyan-500
-                               text-white text-xl
-                               shadow-xl
-                               flex items-center justify-center
-                               transition-all duration-300
-                               relative hover:scale-110"
+                    className="group w-14 h-14 rounded-full bg-main text-bgcolor flex items-center justify-center transition-transform hover:scale-110 relative"
                 >
-                    💬
-                    <span className="absolute -top-1 -right-1 w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></span>
+                    <MessageCircle size={24} strokeWidth={1.5} />
+                    <span className="absolute top-0 right-0 w-3 h-3 bg-green-500 rounded-full animate-pulse border-2 border-bgcolor"></span>
                 </button>
             )}
 
@@ -70,54 +66,44 @@ export default function CTAFlutuante() {
             {!minimized && (
                 <div
                     className="
-                        w-[280px] sm:w-[300px] p-6
-                        rounded-2xl
-                        border
-                        backdrop-blur-xl
-                        shadow-[0_25px_70px_rgba(0,0,0,0.18)]
-                        bg-white/80 border-slate-200
-                        dark:bg-slate-900/80 dark:border-slate-800
+                        w-[280px] sm:w-[320px] p-8
+                        bg-bgcolor bg-opacity-90 backdrop-blur-md border border-main border-opacity-20
+                        shadow-2xl
                         transition-all duration-300
-                        relative
+                        relative flex flex-col gap-6
                     "
                 >
-                    <span className="text-xs text-emerald-500 font-medium">
-                        ● Disponível para novos projetos
-                    </span>
+                    <div className="flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                        <span className="font-inter text-[10px] tracking-widest text-main uppercase">
+                            {t('cta.available')}
+                        </span>
+                    </div>
 
-                    <p className="text-slate-800 dark:text-slate-200 text-sm mt-3 mb-3 leading-relaxed">
-                        Precisa de um backend sólido, escalável e bem estruturado?
+                    <p className="font-inter font-light text-lg text-main leading-relaxed">
+                        {t('cta.title')}
                     </p>
 
-                    <p className="text-xs text-slate-500 dark:text-slate-400 mb-5">
-                        Posso te ajudar a transformar sua ideia em uma solução real,
-                        com arquitetura limpa e foco em performance.
+                    <p className="font-inter text-xs text-brand leading-relaxed">
+                        {t('cta.desc')}
                     </p>
 
                     <button
                         onClick={goToContact}
-                        className="w-full py-2.5
-                                   bg-cyan-600 hover:bg-cyan-500
-                                   text-white text-sm font-medium
-                                   rounded-xl
-                                   transition-all duration-200
-                                   hover:scale-[1.02]"
+                        className="w-full py-4 px-2 bg-main text-bgcolor font-inter text-xs tracking-widest uppercase hover:opacity-80 transition-opacity"
                     >
-                        Falar sobre meu projeto
+                        {t('cta.button')}
                     </button>
 
-                    <p className="text-[11px] text-slate-400 mt-3 text-center">
-                        Resposta rápida • Sem compromisso
+                    <p className="font-inter text-[10px] text-brand tracking-widest uppercase text-center opacity-70">
+                        {t('cta.footer')}
                     </p>
 
                     <button
                         onClick={() => setMinimized(true)}
-                        className="absolute top-3 right-4
-                                   text-xs
-                                   text-slate-400 hover:text-slate-600
-                                   dark:text-slate-500 dark:hover:text-slate-300"
+                        className="absolute top-6 right-6 text-main hover:opacity-50 transition-opacity"
                     >
-                        —
+                        <X size={20} strokeWidth={1} />
                     </button>
                 </div>
             )}

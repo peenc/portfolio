@@ -1,170 +1,86 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
-import { Moon, Sun, Menu, X, Home } from "lucide-react";
+import { Menu, X, Moon, Sun, Globe } from "lucide-react";
+import { useThemeLang } from "../context/ThemeLangContext.jsx";
 
 export default function Navbar() {
-    const [darkMode, setDarkMode] = useState(true);
     const [menuOpen, setMenuOpen] = useState(false);
+    const { darkMode, toggleTheme, lang, toggleLang, t } = useThemeLang();
 
-    useEffect(() => {
-        const savedTheme = localStorage.getItem("theme");
-        if (savedTheme) {
-            setDarkMode(savedTheme === "dark");
-        } else {
-            setDarkMode(true);
-        }
-    }, []);
-
-    useEffect(() => {
-        if (darkMode) {
-            document.documentElement.classList.add("dark");
-            localStorage.setItem("theme", "dark");
-        } else {
-            document.documentElement.classList.remove("dark");
-            localStorage.setItem("theme", "light");
-        }
-    }, [darkMode]);
+    const spacedText = (text) => {
+        if (!text) return "";
+        return text.split('').join(' ');
+    };
 
     return (
         <>
-            <nav className="fixed top-0 w-full z-50
-                            bg-white/70 dark:bg-slate-950/70
-                            backdrop-blur-xl
-                            border-b border-slate-200 dark:border-slate-800
-                            transition-colors duration-300">
+            <nav className="fixed top-0 w-full z-50 bg-transparent py-8 px-6 md:px-12 flex justify-between items-start pointer-events-none">
+                
+                {/* Logo */}
+                <Link
+                    to="/"
+                    className="font-inter font-light text-sm tracking-superwide text-main hover:opacity-70 hover:scale-105 transition-all duration-500 pointer-events-auto"
+                >
+                    P E D R O
+                </Link>
 
-                <div className="max-w-[1400px] mx-auto px-6 py-4
-                                flex justify-between items-center">
+                <div className="flex items-center gap-8 pointer-events-auto">
+                    {/* Desktop Menu (Controls Only) */}
+                    <div className="hidden md:flex items-center gap-8 text-xs font-inter font-light tracking-superwide text-main uppercase">
+                        
+                        <div className="flex items-center gap-6">
+                            <button onClick={toggleLang} className="group flex items-center gap-2 hover:-translate-y-[2px] transition-all duration-300">
+                                <Globe size={14} className="group-hover:rotate-[45deg] transition-transform duration-500 ease-out" /> 
+                                <span>{lang === 'pt' ? 'EN' : 'PT'}</span>
+                            </button>
+                            <button onClick={toggleTheme} className="group flex items-center gap-2 hover:-translate-y-[2px] transition-all duration-300">
+                                {darkMode ? (
+                                    <Sun size={14} className="group-hover:rotate-90 group-hover:scale-110 transition-transform duration-500 ease-out" />
+                                ) : (
+                                    <Moon size={14} className="group-hover:-rotate-[15deg] group-hover:scale-110 transition-transform duration-500 ease-out" />
+                                )}
+                            </button>
+                        </div>
 
-                    {/* Logo */}
-                    <Link
-                        to="/"
-                        className="text-xl font-bold tracking-tight
-                                   text-gray-900 dark:text-white
-                                   hover:text-cyan-500 transition"
-                    >
-                        Pedro.dev
-                    </Link>
-
-                    {/* Desktop Menu */}
-                    <div className="hidden md:flex gap-8 text-sm
-                                    text-gray-700 dark:text-slate-300
-                                    items-center">
-
-                        <Link to="/" className="hover:text-cyan-500 transition">
-                            Início
-                        </Link>
-
-                        <Link to="/projetos" className="hover:text-cyan-500 transition">
-                            Projetos
-                        </Link>
-
-                        <Link to="/sobre" className="hover:text-cyan-500 transition">
-                            Sobre
-                        </Link>
-
-                        <Link to="/curriculo" className="hover:text-cyan-500 transition">
-                            Currículo
-                        </Link>
-
-                        <a
-                            href="https://github.com/peenc"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-cyan-500 transition"
-                        >
-                            <FaGithub size={18} />
+                        <a href="https://github.com/peenc" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 hover:-translate-y-[2px] transition-all duration-300">
+                            <FaGithub size={16} className="group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-500 ease-out" /> 
+                            <span>GITHUB</span>
                         </a>
-
-                        <button
-                            onClick={() => setDarkMode(!darkMode)}
-                            className="ml-4 p-2 rounded-lg
-                                       bg-slate-200 dark:bg-slate-800
-                                       hover:scale-110 transition"
-                        >
-                            {darkMode ? (
-                                <Sun size={18} className="text-yellow-400" />
-                            ) : (
-                                <Moon size={18} className="text-slate-700" />
-                            )}
-                        </button>
                     </div>
 
-                    {/* Mobile Hamburger */}
+                    {/* Menu Hamburger */}
                     <button
-                        className="md:hidden text-gray-900 dark:text-white"
+                        className="group text-main hover:scale-110 transition-transform duration-300 ease-out"
                         onClick={() => setMenuOpen(true)}
                     >
-                        <Menu size={28} />
+                        <Menu size={28} strokeWidth={1} className="group-hover:stroke-[1.5px] transition-all duration-300" />
                     </button>
                 </div>
             </nav>
 
-            {/* Overlay */}
-            <div
-                className={`fixed inset-0 bg-black/40 backdrop-blur-sm z-40 transition-opacity duration-300
-                ${menuOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
-                onClick={() => setMenuOpen(false)}
-            />
+            {/* Mobile Fullscreen Overlay */}
+            <div className={`fixed inset-0 bg-bgcolor z-50 transition-opacity duration-500 flex flex-col justify-center items-center ${menuOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
+                <button 
+                    onClick={() => setMenuOpen(false)}
+                    className="absolute top-8 right-8 text-main hover:opacity-50 transition-opacity"
+                >
+                    <X size={36} strokeWidth={1} />
+                </button>
 
-            {/* Mobile Sidebar */}
-            <div
-                className={`fixed top-0 left-0 h-full w-72
-                bg-white dark:bg-slate-950
-                border-r border-slate-200 dark:border-slate-800
-                z-50
-                transform transition-transform duration-300 ease-in-out
-                ${menuOpen ? "translate-x-0" : "-translate-x-full"}`}
-            >
-                <div className="p-6 flex justify-between items-center border-b border-slate-200 dark:border-slate-800">
-                    <span className="font-bold text-lg text-gray-900 dark:text-white">
-                        Menu
-                    </span>
-                    <button onClick={() => setMenuOpen(false)}>
-                        <X size={24} />
-                    </button>
-                </div>
-
-                <div className="flex flex-col gap-6 p-6 text-gray-800 dark:text-slate-300">
-
-                    <Link to="/" onClick={() => setMenuOpen(false)} className="flex items-center gap-2">
-                        <Home size={18} />
-                        Início
-                    </Link>
-
-                    <Link to="/projetos" onClick={() => setMenuOpen(false)}>
-                        Projetos
-                    </Link>
-
-                    <Link to="/sobre" onClick={() => setMenuOpen(false)}>
-                        Sobre
-                    </Link>
-
-                    <Link to="/curriculo" onClick={() => setMenuOpen(false)}>
-                        Currículo
-                    </Link>
-
-                    <a
-                        href="https://github.com/peenc"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2"
-                    >
-                        <FaGithub />
-                        GitHub
-                    </a>
-
-                    <button
-                        onClick={() => setDarkMode(!darkMode)}
-                        className="flex items-center gap-2 mt-4
-                                   p-2 rounded-lg
-                                   bg-slate-200 dark:bg-slate-800"
-                    >
-                        {darkMode ? <Sun size={18} /> : <Moon size={18} />}
-                        Alternar tema
-                    </button>
-
+                <div className="flex flex-col gap-10 font-inter font-light text-sm tracking-superwide text-main uppercase text-center">
+                    <Link to="/" onClick={() => setMenuOpen(false)} className="hover:opacity-50 transition-opacity">{spacedText(t('nav.home'))}</Link>
+                    <Link to="/#projetos" onClick={() => setMenuOpen(false)} className="hover:opacity-50 transition-opacity">{spacedText(t('nav.projects'))}</Link>
+                    <Link to="/curriculo" onClick={() => setMenuOpen(false)} className="hover:opacity-50 transition-opacity">{spacedText(t('nav.resume'))}</Link>
+                    
+                    <div className="flex gap-8 justify-center mt-6">
+                        <button onClick={toggleLang} className="hover:opacity-50 transition-opacity flex items-center gap-2">
+                            <Globe size={16} /> {lang === 'pt' ? 'EN' : 'PT'}
+                        </button>
+                        <button onClick={toggleTheme} className="hover:opacity-50 transition-opacity flex items-center gap-2">
+                            {darkMode ? <Sun size={16} /> : <Moon size={16} />}
+                        </button>
+                    </div>
                 </div>
             </div>
         </>

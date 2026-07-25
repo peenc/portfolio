@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About",
+    "resume": "Resume",
+    "contact": "Contact"
+  },
+  "home": {
+    "role": "Software Engineer",
+    "subrole": "Architecture & Backend",
+    "view_project": "View Project",
+    "contact": "Get In Touch"
+  },
+  "projects": {
+    "title": "Selected Works"
+  },
+  "about": {
+    "title": "About Me",
+    "desc1": "Software Engineer with experience in the architecture and development of data-driven SaaS systems and automation pipelines.",
+    "desc2": "My specialty involves system design decisions for scalable architectures, relational and vector data modeling, and integrating Artificial Intelligence into real business workflows.",
+    "personal": "Always innovating and looking to learn new approaches. Software development for me is more than code: it's about building resilient architectures that solve real problems efficiently, uniting logic and creativity.",
+    "intro1": "Hello, I'm Pedro.",
+    "intro2": "I'm a Software Engineer focused on crafting digital products that unite performance, scalable architecture, and flawless design.",
+    "philosophy": "I believe that good code shouldn't just work, it must be built upon solid foundations. My daily focus is on engineering resilient systems that drive real impact, writing code I'd be proud to read tomorrow.",
+    "skills": "Technical Skills",
+    "specializations": "Specializations & Academic Focus",
+    "experience": "Experience",
+    "contact_title": "Location & Contact",
+    "location": "Rio de Janeiro, Brazil",
+    "academic": "Academic Background",
+    "degree": "B.S. in Computer Science",
+    "university": "UFRRJ, Nova Iguaçu Campus (2026)",
+    "defense": "Read Capstone Project (TCC)",
+    "footer_dev": "Webdesign & Development by Pedro Nunes Cardoso",
+    "disclaimer_title": "Analytics Disclaimer",
+    "disclaimer": "This website collects basic analytical data anonymously to help understand traffic metrics. No personally identifiable or sensitive information is tracked, stored, or shared. Browsing the portfolio does not require intrusive cookies."
+  },
+  "exp": {
+    "behealth": {
+      "role": "Software Engineer",
+      "date": "Oct 2025 – Present",
+      "desc": "Architecture and development of the BeHealth Intelligence Platform (BIP), a data-driven SaaS for centralizing critical business and patient journey metrics.",
+      "items": [
+        "Definition of modular and scalable architecture with domain separation",
+        "Implementation of reliability patterns (idempotency, failure handling)",
+        "Construction of integration pipelines between CRM and external systems",
+        "Implementation of security layer with JWT, RBAC, and MFA (2FA)"
+      ]
+    },
+    "indefinidos": {
+      "role": "Software Engineer & Systems Architect",
+      "desc": "Development of an AI agent with autonomous execution of real actions in internal systems.",
+      "items": [
+        "AI agent with autonomous execution in real systems (CRM, emails)",
+        "Implementation of native integration (Function Calling) for system action execution",
+        "Implementation of a vector memory system (RAG) using pgvector",
+        "Integration of the AI agent directly into operational workflows"
+      ]
+    }
+  },
+  "resume": {
+    "title": "Resume",
+    "download": "Download PDF",
+    "bio1": "Full Stack Software Engineer specialized in the Java (Spring Boot) and React (TypeScript) ecosystems. My focus is designing scalable, secure architectures and robust APIs that solve real business problems. I have a strong background in data modeling and creating end-to-end SaaS platforms, always prioritizing engineering best practices such as TDD, Clean Architecture, and CI/CD to deliver highly resilient code."
+  },
+  "project_details": {
+    "back": "Back to Projects",
+    "technologies": "Technologies Used",
+    "view_live": "View Live",
+    "view_code": "View Source Code"
+  },
+  "cta": {
+    "available": "Open to new opportunities",
+    "title": "Looking for a Software Engineer focused on architecture and scalability?",
+    "desc": "I am available for full-time (CLT/PJ) roles or freelance projects. Let's talk about how I can add value to your team or product.",
+    "button": "Let's Talk",
+    "footer": "Fast response • No commitment"
+  }
+}

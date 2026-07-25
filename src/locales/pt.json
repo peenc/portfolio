@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "home": "Início",
+    "projects": "Projetos",
+    "about": "Sobre",
+    "resume": "Currículo",
+    "contact": "Contato"
+  },
+  "home": {
+    "role": "Software Engineer",
+    "subrole": "Arquitetura & Backend",
+    "view_project": "Visualizar Projeto",
+    "contact": "Fale Comigo"
+  },
+  "projects": {
+    "title": "Trabalhos Selecionados"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "desc1": "Engenheiro de Software com experiência na arquitetura e desenvolvimento de sistemas SaaS orientados a dados e pipelines de automação.",
+    "desc2": "Minha especialidade envolve o design de sistemas escaláveis, modelagem de dados relacionais e vetoriais, e a integração de Inteligência Artificial em fluxos de negócio reais.",
+    "personal": "Sempre inovando e buscando aprender novas abordagens. O desenvolvimento de software para mim é mais do que código: é sobre criar arquiteturas resilientes que resolvem problemas de forma eficiente, unindo lógica e criatividade.",
+    "intro1": "Olá, sou o Pedro.",
+    "intro2": "Sou um Engenheiro de Software focado em criar produtos digitais que unem performance, arquitetura escalável e design impecável.",
+    "philosophy": "Acredito que um bom código não deve apenas funcionar, mas deve ser construído sobre fundações sólidas. Meu foco diário é construir sistemas resilientes que tragam impacto real, escrevendo código que eu me orgulharia de ler amanhã.",
+    "skills": "Habilidades Técnicas",
+    "specializations": "Especializações & Foco Acadêmico",
+    "experience": "Experiência",
+    "contact_title": "Local & Contato",
+    "location": "Rio de Janeiro, RJ",
+    "academic": "Formação Acadêmica",
+    "degree": "Bacharelado em Ciência da Computação",
+    "university": "UFRRJ, Campus Nova Iguaçu (2026)",
+    "defense": "Ler Trabalho de Conclusão (TCC)",
+    "footer_dev": "Design & Desenvolvimento por Pedro Nunes Cardoso",
+    "disclaimer_title": "Analytics Disclaimer",
+    "disclaimer": "Este site coleta dados analíticos básicos de forma anônima para métricas de tráfego. Nenhuma informação pessoal identificável ou sensível é rastreada, armazenada ou compartilhada. A navegação no portfólio não requer o uso de cookies intrusivos."
+  },
+  "exp": {
+    "behealth": {
+      "role": "Software Engineer",
+      "date": "Out 2025 – Atual",
+      "desc": "Arquitetura e desenvolvimento do BeHealth Intelligence Platform (BIP), SaaS orientado a dados para centralização de métricas críticas de negócio e jornada do paciente.",
+      "items": [
+        "Definição de arquitetura modular e escalável com separação de domínios",
+        "Implementação de padrões de confiabilidade (idempotência, tratamento de falhas)",
+        "Integração via APIs e Webhooks entre CRM e sistemas externos",
+        "Camada de segurança com JWT, RBAC e MFA (2FA)"
+      ]
+    },
+    "indefinidos": {
+      "role": "Software Engineer & Systems Architect",
+      "desc": "Desenvolvimento de agentes de IA e automação inteligente para processos de negócios internos.",
+      "items": [
+        "Agente de IA com execução autônoma de ações reais (CRM, e-mails, documentos)",
+        "Implementação de integração nativa (Function Calling) para execução de ações no sistema",
+        "Implementação de sistema de memória vetorial (RAG) utilizando pgvector",
+        "Integração do agente de IA diretamente em workflows operacionais"
+      ]
+    }
+  },
+  "resume": {
+    "title": "Currículo",
+    "download": "Baixar PDF",
+    "bio1": "Engenheiro de Software Full Stack especializado no ecossistema Java (Spring Boot) e React (TypeScript). Meu foco é projetar arquiteturas escaláveis, seguras e APIs robustas que resolvam problemas reais de negócio. Possuo forte atuação na modelagem de dados e na criação de plataformas SaaS ponta a ponta, sempre priorizando boas práticas de engenharia como TDD, Clean Architecture e CI/CD para entregar código altamente resiliente."
+  },
+  "project_details": {
+    "back": "Voltar aos Projetos",
+    "technologies": "Tecnologias Utilizadas",
+    "view_live": "Ver ao vivo",
+    "view_code": "Ver código fonte"
+  },
+  "cta": {
+    "available": "Aberto a novas oportunidades",
+    "title": "Buscando um Engenheiro de Software focado em arquitetura e escalabilidade?",
+    "desc": "Estou disponível para atuar como CLT, PJ ou em projetos pontuais. Vamos conversar sobre como posso agregar valor ao seu time ou produto.",
+    "button": "Vamos Conversar",
+    "footer": "Resposta rápida • Sem compromisso"
+  }
+}

@@ -1,3 +1,71 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-color: #f9f9f9;
+    --main-color: #1a1a1a;
+    --brand-color: #737373;
+    --hover-bg: #e5e5e5;
+  }
+
+  .dark {
+    --bg-color: #050505;
+    --main-color: #f9f9f9;
+    --brand-color: #a3a3a3;
+    --hover-bg: #1f1f1f;
+  }
+
+  html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-bgcolor text-main font-inter font-light transition-colors duration-700;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: visible;
+  }
+
+  /* Hide scrollbar */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  ::-moz-selection { background: theme('colors.main'); color: theme('colors.bgcolor'); }
+  ::selection { background: theme('colors.main'); color: theme('colors.bgcolor'); }
+
+  /* Custom Global Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--bg-color); 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--brand-color);
+    border-radius: 100px;
+    border: 3px solid var(--bg-color);
+    transition: background 0.3s ease;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--main-color);
+  }
+  
+  /* For Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--brand-color) var(--bg-color);
+  }
+}
